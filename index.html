@@ -32,14 +32,14 @@
 </head>
 <body class="bg-black text-white">
   <!-- Navbar -->
-  <header class="fixed top-6 left-0 right-0 z-50 w-full">
+  <header class="fixed top-6 left-0 right-0 z-50 w-full px-4">
     <div class="bg-primary text-white px-6 py-4 mx-auto max-w-6xl rounded-2xl shadow-xl flex items-center justify-between">
       <a href="/" class="text-xl font-semibold">SwiftAML</a>
       <nav class="hidden md:flex space-x-6 items-center">
         <!-- Solutions -->
         <div class="relative group">
           <button class="hover:underline">Solutions</button>
-          <div class="absolute hidden group-hover:grid grid-cols-2 bg-white text-black rounded-xl shadow-xl mt-3 w-[50rem] p-6 z-50 gap-6">
+          <div class="absolute left-0 group-hover:grid grid-cols-2 bg-white text-black rounded-xl shadow-xl mt-3 w-[50rem] p-6 z-50 gap-6 hidden">
             <div class="flex gap-4 items-start">
               <div class="text-2xl text-primary"><i class="fas fa-tasks"></i></div>
               <div>
@@ -88,7 +88,7 @@
         <!-- Industries -->
         <div class="relative group">
           <button class="hover:underline">Industries</button>
-          <div class="absolute hidden group-hover:block bg-white text-black rounded-xl shadow-xl mt-3 w-80 p-6 z-50 space-y-5">
+          <div class="absolute left-0 hidden group-hover:block bg-white text-black rounded-xl shadow-xl mt-3 w-80 p-6 z-50 space-y-5">
             <div class="flex gap-4 items-start">
               <div class="text-2xl text-primary"><i class="fas fa-university"></i></div>
               <div>
@@ -116,7 +116,7 @@
         <!-- Resources -->
         <div class="relative group">
           <button class="hover:underline">Resources</button>
-          <div class="absolute hidden group-hover:block bg-white text-black rounded-xl shadow-xl mt-3 w-80 p-6 z-50 space-y-5">
+          <div class="absolute left-0 hidden group-hover:block bg-white text-black rounded-xl shadow-xl mt-3 w-80 p-6 z-50 space-y-5">
             <div class="flex gap-4 items-start">
               <div class="text-2xl text-primary"><i class="fas fa-blog"></i></div>
               <div>
@@ -144,7 +144,7 @@
         <!-- Company -->
         <div class="relative group">
           <button class="hover:underline">Company</button>
-          <div class="absolute hidden group-hover:grid grid-cols-2 bg-white text-black rounded-xl shadow-xl mt-3 w-[40rem] p-6 z-50 gap-6">
+          <div class="absolute left-0 hidden group-hover:grid grid-cols-2 bg-white text-black rounded-xl shadow-xl mt-3 w-[40rem] p-6 z-50 gap-6">
             <div class="flex gap-4 items-start">
               <div class="text-2xl text-primary"><i class="fas fa-building"></i></div>
               <div>
@@ -175,6 +175,7 @@
             </div>
           </div>
         </div>
+
         <a href="#" class="bg-white text-primary font-semibold px-4 py-2 rounded-md">Request a Demo</a>
       </nav>
     </div>
