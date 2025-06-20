@@ -27,38 +27,107 @@
 
       <!-- Main Nav -->
       <nav class="hidden md:flex space-x-6 items-center">
+        <!-- Solutions -->
         <div class="relative group">
           <button class="text-gray-700 font-medium flex items-center gap-1">Solutions <span>&#9662;</span></button>
-          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Screening</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Monitoring</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">KYB</a>
+          <div class="absolute left-0 mt-2 w-80 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-all pointer-events-none group-hover:pointer-events-auto p-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+              </div>
+              <div>
+                <a href="#" class="font-semibold text-gray-900 block">AML Screening</a>
+                <p class="text-sm text-gray-500">Automated entity checks and risk filtering in real-time.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18M3 18h18" /></svg>
+              </div>
+              <div>
+                <a href="#" class="font-semibold text-gray-900 block">Transaction Monitoring</a>
+                <p class="text-sm text-gray-500">Detect suspicious activity with customizable rules.</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Industries -->
         <div class="relative group">
           <button class="text-gray-700 font-medium flex items-center gap-1">Industries <span>&#9662;</span></button>
-          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Banking</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">FinTech</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Payments</a>
+          <div class="absolute left-0 mt-2 w-80 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-all pointer-events-none group-hover:pointer-events-auto p-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5V4H2v16h5m10 0V4" /></svg>
+              </div>
+              <div>
+                <a href="#" class="font-semibold text-gray-900 block">Banks</a>
+                <p class="text-sm text-gray-500">Advanced compliance solutions for financial institutions.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.333 1.333-2 2.667-2 4s.667 2.667 2 4 2-1.333 2-4-.667-2.667-2-4z" /></svg>
+              </div>
+              <div>
+                <a href="#" class="font-semibold text-gray-900 block">Payment Providers</a>
+                <p class="text-sm text-gray-500">Real-time screening and compliance for PSPs.</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Resources -->
         <div class="relative group">
           <button class="text-gray-700 font-medium flex items-center gap-1">Resources <span>&#9662;</span></button>
-          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
-            <a href="/blog" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
-            <a href="/news" class="block px-4 py-2 hover:bg-gray-100">News</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Case Studies</a>
+          <div class="absolute left-0 mt-2 w-80 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-all pointer-events-none group-hover:pointer-events-auto p-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </div>
+              <div>
+                <a href="/blog" class="font-semibold text-gray-900 block">Blog</a>
+                <p class="text-sm text-gray-500">Insights and industry updates.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              </div>
+              <div>
+                <a href="/news" class="font-semibold text-gray-900 block">News</a>
+                <p class="text-sm text-gray-500">Company announcements and media.</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Company -->
         <div class="relative group">
           <button class="text-gray-700 font-medium flex items-center gap-1">Company <span>&#9662;</span></button>
-          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Careers</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+          <div class="absolute left-0 mt-2 w-80 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-all pointer-events-none group-hover:pointer-events-auto p-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4-4-1.79-4-4zm-4 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z" /></svg>
+              </div>
+              <div>
+                <a href="#" class="font-semibold text-gray-900 block">About Us</a>
+                <p class="text-sm text-gray-500">Learn more about our mission and team.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="text-white bg-primary p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z" /></svg>
+              </div>
+              <div>
+                <a href="#" class="font-semibold text-gray-900 block">Careers</a>
+                <p class="text-sm text-gray-500">Join our growing team of innovators.</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Login -->
         <div class="relative group">
           <button class="bg-gray-100 px-3 py-1 rounded-md font-medium text-gray-800 flex items-center gap-1">Login <span>&#9662;</span></button>
           <div class="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
@@ -66,6 +135,8 @@
             <a href="#" class="block px-4 py-2 hover:bg-gray-100">Partner Access</a>
           </div>
         </div>
+
+        <!-- CTA -->
         <a href="/demo" class="ml-4 px-4 py-2 rounded-md text-white font-semibold bg-primary hover:bg-indigo-600">Request a Demo</a>
       </nav>
 
