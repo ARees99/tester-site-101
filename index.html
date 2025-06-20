@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facctum - AML Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Floating, Soft-Edged Navigation -->
+  <header class="floating-nav">
+    <div class="nav-container">
+      <a href="/" class="logo">Facctum</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="/solutions">Solutions</a>
+        <a href="/industries">Industries</a>
+        <a href="/resources">Resources</a>
+        <a href="/blog">Blog</a>
+        <a href="/news">News</a>
+        <a href="/aml-services">AML Services</a>
+        <a href="/demo" class="cta">Request a Demo</a>
+      </nav>
+      <button class="hamburger" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
