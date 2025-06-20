@@ -39,65 +39,69 @@
     @keyframes fadeIn {
       to { opacity: 1; }
     }
+    .card {
+      perspective: 1000px;
+    }
+    .card-inner {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front,
+    .card-back {
+      backface-visibility: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
   </style>
 </head>
 <body class="bg-secondary">
   <!-- Navbar -->
-  <header class="sticky top-0 z-50 w-full">
-    <div class="bg-primary text-white px-4 py-4 flex items-center justify-between max-w-7xl mx-auto">
-      <a href="/" class="text-lg font-semibold">SwiftAML</a>
-      <button class="md:hidden" id="menuToggle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <nav id="navMenu" class="hidden md:flex space-x-4 items-center">
+  <header class="fixed top-6 left-0 right-0 z-50 w-full">
+    <div class="bg-primary text-white px-6 py-4 mx-auto max-w-6xl rounded-2xl shadow-xl flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold">SwiftAML</a>
+      <nav class="hidden md:flex space-x-6 items-center">
         <a href="#" class="hover:underline">Solutions</a>
         <a href="#" class="hover:underline">Industries</a>
         <a href="#" class="hover:underline">Resources</a>
         <a href="#" class="hover:underline">Company</a>
-        <a href="#" class="bg-white text-primary font-semibold px-3 py-1 rounded-md">Request a Demo</a>
+        <a href="#" class="bg-white text-primary font-semibold px-4 py-2 rounded-md">Request a Demo</a>
       </nav>
-    </div>
-    <div id="mobileNav" class="md:hidden hidden bg-primary text-white px-4 py-2 space-y-2">
-      <a href="#" class="block">Solutions</a>
-      <a href="#" class="block">Industries</a>
-      <a href="#" class="block">Resources</a>
-      <a href="#" class="block">Company</a>
-      <a href="#" class="block bg-white text-primary px-3 py-2 rounded-md inline-block">Request a Demo</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative w-full min-h-screen flex items-center justify-center text-white text-center bg-black overflow-hidden px-4">
-    <!-- Background globe video/animation -->
+  <section class="relative w-full min-h-screen flex items-center justify-center text-white text-center bg-black overflow-hidden px-4 pt-28">
     <video autoplay loop muted playsinline class="absolute w-full h-full object-cover opacity-30">
       <source src="https://assets-global.website-files.com/63f8b82d45b7f0e273212b3e/63fc539b6522a2e736d91923_background-loop.webm" type="video/webm">
     </video>
-
-    <!-- Hero Content -->
     <div class="relative z-10 max-w-3xl w-full">
       <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold typing-text break-words">AI‑Powered Compliance That Never Sleeps</h1>
       <p class="mt-4 text-sm sm:text-lg md:text-xl fade-in">SwiftAML provides intelligent screening, monitoring and real-time risk decisions for financial crime compliance.</p>
-
-      <!-- Features/Stats -->
       <div class="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3 text-left fade-in">
         <div class="flex items-start gap-3">
-          <span class="text-green-400 mt-1">✔</span>
+          <span class="text-purple-400 mt-1">✔</span>
           <div>
             <h4 class="font-semibold">99.9% Match Accuracy</h4>
             <p class="text-sm text-gray-200">Minimize false positives across sanctions and PEP screening.</p>
           </div>
         </div>
         <div class="flex items-start gap-3">
-          <span class="text-green-400 mt-1">✔</span>
+          <span class="text-purple-400 mt-1">✔</span>
           <div>
             <h4 class="font-semibold">Real-Time Monitoring</h4>
             <p class="text-sm text-gray-200">Identify suspicious activity as it happens.</p>
           </div>
         </div>
         <div class="flex items-start gap-3">
-          <span class="text-green-400 mt-1">✔</span>
+          <span class="text-purple-400 mt-1">✔</span>
           <div>
             <h4 class="font-semibold">API-First Integration</h4>
             <p class="text-sm text-gray-200">Easily integrate into your existing tech stack.</p>
@@ -107,13 +111,100 @@
     </div>
   </section>
 
-  <script>
-    const toggleBtn = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileNav');
+  <!-- Solutions Section -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Solutions</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="card relative w-full h-64 bg-primary text-white rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">🔍</div>
+              <h3 class="text-xl font-semibold">Customer Screening</h3>
+              <p class="text-sm">Screen entities against sanctions and PEPs in real-time.</p>
+            </div>
+            <div class="card-back p-6 bg-white text-gray-800 flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">How it works</h3>
+              <p class="text-sm">Real-time fuzzy matching, list harmonisation, and dynamic watchlist segmentation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-primary text-white rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">💳</div>
+              <h3 class="text-xl font-semibold">Transaction Monitoring</h3>
+              <p class="text-sm">Identify risk in payment activity using behaviour rules.</p>
+            </div>
+            <div class="card-back p-6 bg-white text-gray-800 flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">How it works</h3>
+              <p class="text-sm">Rule- and AI-based monitoring with dynamic thresholding and alert scoring.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-primary text-white rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">📄</div>
+              <h3 class="text-xl font-semibold">Adverse Media</h3>
+              <p class="text-sm">Screen for reputational risk and negative news.</p>
+            </div>
+            <div class="card-back p-6 bg-white text-gray-800 flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">How it works</h3>
+              <p class="text-sm">Multi-language media screening with NLP and risk classification tagging.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+  <!-- Challenges Section -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Challenges We Solve</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="card relative w-full h-64 bg-white text-gray-800 rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">📉</div>
+              <h3 class="text-xl font-semibold">False Positives</h3>
+              <p class="text-sm">Too many alerts that waste analyst time.</p>
+            </div>
+            <div class="card-back p-6 bg-primary text-white flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">Our Solution</h3>
+              <p class="text-sm">Precision matching and AI scoring reduce false positives by up to 90%.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-white text-gray-800 rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">🕒</div>
+              <h3 class="text-xl font-semibold">Manual Investigations</h3>
+              <p class="text-sm">Analysts spend too long investigating alerts.</p>
+            </div>
+            <div class="card-back p-6 bg-primary text-white flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">Our Solution</h3>
+              <p class="text-sm">Streamlined case management with link analysis and alert resolution scoring.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-white text-gray-800 rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">🌐</div>
+              <h3 class="text-xl font-semibold">Inconsistent Screening</h3>
+              <p class="text-sm">Lack of real-time global coverage & audit trail.</p>
+            </div>
+            <div class="card-back p-6 bg-primary text-white flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">Our Solution</h3>
+              <p class="text-sm">Real-time cloud screening across languages with full transparency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
