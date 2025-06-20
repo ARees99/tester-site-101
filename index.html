@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftAML Platform</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -26,15 +26,19 @@
       50% { border-color: transparent }
     }
     .typing-text {
+      display: inline-block;
       overflow: hidden;
       white-space: nowrap;
       border-right: 2px solid white;
       width: 0;
-      animation: typing 4s steps(40, end) forwards, blink .75s step-end infinite;
+      animation: typing 3s steps(30, end) forwards, blink .75s step-end infinite;
     }
     .fade-in {
       opacity: 0;
-      animation: fadeIn 1.5s ease-in-out forwards;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    .delay-1500 {
+      animation-delay: 1.5s;
     }
     @keyframes fadeIn {
       to { opacity: 1; }
@@ -83,7 +87,10 @@
       <source src="https://assets-global.website-files.com/63f8b82d45b7f0e273212b3e/64074e012df36810fe1fc603_hero-aml-data-globe-transcode.mp4" type="video/mp4">
     </video>
     <div class="relative z-10 max-w-4xl w-full">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold typing-text">AI‑Powered Compliance That Never Sleeps</h1>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+        <span class="typing-text block">AI‑Powered Compliance</span>
+        <span class="fade-in delay-1500 block mt-2">That Never Sleeps</span>
+      </h1>
       <p class="mt-6 text-base sm:text-lg md:text-xl fade-in">SwiftAML provides intelligent screening, monitoring and real-time risk decisions for financial crime compliance.</p>
       <div class="mt-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3 text-left fade-in">
         <div class="flex items-start gap-3">
@@ -111,8 +118,100 @@
     </div>
   </section>
 
-  <!-- Solutions Section (already added previously) -->
-  <!-- Challenges Section (already added previously) -->
+  <!-- Solutions Section -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Solutions</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="card relative w-full h-64 bg-primary text-white rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">🔍</div>
+              <h3 class="text-xl font-semibold">Customer Screening</h3>
+              <p class="text-sm">Screen entities against sanctions and PEPs in real-time.</p>
+            </div>
+            <div class="card-back p-6 bg-white text-gray-800 flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">How it works</h3>
+              <p class="text-sm">Real-time fuzzy matching, list harmonisation, and dynamic watchlist segmentation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-primary text-white rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">💳</div>
+              <h3 class="text-xl font-semibold">Transaction Monitoring</h3>
+              <p class="text-sm">Identify risk in payment activity using behaviour rules.</p>
+            </div>
+            <div class="card-back p-6 bg-white text-gray-800 flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">How it works</h3>
+              <p class="text-sm">Rule- and AI-based monitoring with dynamic thresholding and alert scoring.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-primary text-white rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">📄</div>
+              <h3 class="text-xl font-semibold">Adverse Media</h3>
+              <p class="text-sm">Screen for reputational risk and negative news.</p>
+            </div>
+            <div class="card-back p-6 bg-white text-gray-800 flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">How it works</h3>
+              <p class="text-sm">Multi-language media screening with NLP and risk classification tagging.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Challenges Section -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Challenges We Solve</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="card relative w-full h-64 bg-white text-gray-800 rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">📉</div>
+              <h3 class="text-xl font-semibold">False Positives</h3>
+              <p class="text-sm">Too many alerts that waste analyst time.</p>
+            </div>
+            <div class="card-back p-6 bg-primary text-white flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">Our Solution</h3>
+              <p class="text-sm">Precision matching and AI scoring reduce false positives by up to 90%.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-white text-gray-800 rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">🕒</div>
+              <h3 class="text-xl font-semibold">Manual Investigations</h3>
+              <p class="text-sm">Analysts spend too long investigating alerts.</p>
+            </div>
+            <div class="card-back p-6 bg-primary text-white flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">Our Solution</h3>
+              <p class="text-sm">Streamlined case management with link analysis and alert resolution scoring.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card relative w-full h-64 bg-white text-gray-800 rounded-xl shadow-xl">
+          <div class="card-inner w-full h-full">
+            <div class="card-front p-6 flex flex-col justify-center items-center text-center">
+              <div class="text-4xl mb-4">🌐</div>
+              <h3 class="text-xl font-semibold">Inconsistent Screening</h3>
+              <p class="text-sm">Lack of real-time global coverage & audit trail.</p>
+            </div>
+            <div class="card-back p-6 bg-primary text-white flex flex-col justify-center items-center text-center">
+              <h3 class="text-xl font-semibold">Our Solution</h3>
+              <p class="text-sm">Real-time cloud screening across languages with full transparency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
