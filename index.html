@@ -3,34 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facctum - AML Platform</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>SwiftAML Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6C47FF',
+            secondary: '#F4F7FA',
+          },
+        },
+      },
+    }
+  </script>
 </head>
-<body>
+<body class="bg-secondary">
+  <!-- Navbar -->
+  <header class="sticky top-6 z-50 mx-auto max-w-7xl px-4">
+    <div class="bg-white shadow-lg rounded-2xl px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="text-xl font-semibold text-gray-900">SwiftAML</a>
 
-  <!-- Floating, Soft-Edged Navigation -->
-  <header class="floating-nav">
-    <div class="nav-container">
-      <a href="/" class="logo">Facctum</a>
-      <nav class="main-nav" id="mainNav">
-        <a href="/solutions">Solutions</a>
-        <a href="/industries">Industries</a>
-        <a href="/resources">Resources</a>
-        <a href="/blog">Blog</a>
-        <a href="/news">News</a>
-        <a href="/aml-services">AML Services</a>
-        <a href="/demo" class="cta">Request a Demo</a>
+      <!-- Main Nav -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <div class="relative group">
+          <button class="text-gray-700 font-medium flex items-center gap-1">Solutions <span>&#9662;</span></button>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Screening</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Monitoring</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">KYB</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="text-gray-700 font-medium flex items-center gap-1">Industries <span>&#9662;</span></button>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Banking</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">FinTech</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Payments</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="text-gray-700 font-medium flex items-center gap-1">Resources <span>&#9662;</span></button>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+            <a href="/blog" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+            <a href="/news" class="block px-4 py-2 hover:bg-gray-100">News</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Case Studies</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="text-gray-700 font-medium flex items-center gap-1">Company <span>&#9662;</span></button>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Careers</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="bg-gray-100 px-3 py-1 rounded-md font-medium text-gray-800 flex items-center gap-1">Login <span>&#9662;</span></button>
+          <div class="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Client Portal</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Partner Access</a>
+          </div>
+        </div>
+        <a href="/demo" class="ml-4 px-4 py-2 rounded-md text-white font-semibold bg-primary hover:bg-indigo-600">Request a Demo</a>
       </nav>
-      <button class="hamburger" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+      <!-- Mobile nav button (optional) -->
+      <div class="md:hidden">
+        <!-- You can add mobile menu logic here -->
+      </div>
     </div>
   </header>
-
-  <script>
-    // Toggle mobile menu
-    document.getElementById('navToggle').addEventListener('click', function () {
-      document.getElementById('mainNav').classList.toggle('open');
-    });
-  </script>
-
 </body>
 </html>
